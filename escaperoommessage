@@ -1,0 +1,33 @@
+let noegle = ""
+let besked = ""
+let morsestreng = ""
+input.onButtonPressed(Button.AB, function () {
+    tjekKode2()
+})
+input.onButtonPressed(Button.B, function () {
+    morsestreng = "" + morsestreng + "-"
+    basic.showString("-")
+    basic.showString(" ")
+})
+function tjekKode2() {
+    if (morsestreng == "*-*")
+        basic.showString(besked)
+    else {
+        basic.showString("?")
+        morsestreng = ""
+    }
+    basic.showString(" ")
+}
+
+input.onButtonPressed(Button.A, function () {
+    morsestreng = "" + morsestreng + "*"
+    basic.showString("*")
+    basic.showString(" ")
+})
+morsestreng = ""
+besked = "ANGRIB RUSLAND"
+noegle = "*-*"
+basic.showIcon(IconNames.Skull)
+basic.forever(function () {
+
+})
