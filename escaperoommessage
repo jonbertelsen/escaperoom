@@ -1,33 +1,28 @@
-let noegle = ""
 let besked = ""
 let morsestreng = ""
+let noegle = ""
 input.onButtonPressed(Button.AB, function () {
-    tjekKode2()
+    tjekKode22()
 })
-input.onButtonPressed(Button.B, function () {
-    morsestreng = "" + morsestreng + "-"
-    basic.showString("-")
-    basic.showString(" ")
-})
-function tjekKode2() {
-    if (morsestreng == "*-*")
-        basic.showString(besked)
-    else {
-        basic.showString("?")
-        morsestreng = ""
-    }
-    basic.showString(" ")
-}
-
 input.onButtonPressed(Button.A, function () {
     morsestreng = "" + morsestreng + "*"
     basic.showString("*")
     basic.showString(" ")
 })
-morsestreng = ""
-besked = "ANGRIB RUSLAND"
-noegle = "*-*"
-basic.showIcon(IconNames.Skull)
-basic.forever(function () {
-
+function tjekKode22() {
+    if (morsestreng == noegle) {
+        basic.showString(besked)
+    } else {
+        basic.showString("?")
+        morsestreng = ""
+    }
+    basic.showString(" ")
+}
+input.onButtonPressed(Button.B, function () {
+    morsestreng = "" + morsestreng + "-"
+    basic.showString("-")
+    basic.showString(" ")
 })
+noegle = "******-***"
+besked = "ANGRIB RUSLAND KL 10"
+basic.showIcon(IconNames.Skull)
